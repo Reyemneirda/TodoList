@@ -22,18 +22,35 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Krd-wT-ydb">
-                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <rect key="frame" x="0.0" y="69" width="375" height="598"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="yWb-xS-OcZ"/>
+                        <outlet property="delegate" destination="-1" id="8x7-hD-6co"/>
+                    </connections>
                 </tableView>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="osf-X2-PQh">
+                    <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                    <items>
+                        <navigationItem title="Title" id="8Co-Xh-Kda">
+                            <barButtonItem key="leftBarButtonItem" systemItem="edit" id="Y0M-DX-ml8"/>
+                            <barButtonItem key="rightBarButtonItem" systemItem="add" id="5Q0-SL-h0V"/>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="osf-X2-PQh" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="3uv-E7-IzC"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Krd-wT-ydb" secondAttribute="trailing" id="44V-zD-AbU"/>
                 <constraint firstItem="Krd-wT-ydb" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Cyj-SS-AQ9"/>
-                <constraint firstItem="Krd-wT-ydb" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="osP-LE-sSB"/>
+                <constraint firstItem="osf-X2-PQh" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Gs4-4r-8ep"/>
+                <constraint firstItem="Krd-wT-ydb" firstAttribute="top" secondItem="osf-X2-PQh" secondAttribute="bottom" constant="5" id="Ibw-KL-NB1"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Krd-wT-ydb" secondAttribute="bottom" id="s7J-1M-KIn"/>
+                <constraint firstItem="osf-X2-PQh" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="xMq-bo-hVX"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="96.5" y="54.5"/>
         </view>
     </objects>
 </document>
