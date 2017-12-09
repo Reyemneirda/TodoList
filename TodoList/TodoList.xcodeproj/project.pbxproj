@@ -16,6 +16,8 @@
 		85C20BBB1FDC68F300959CBC /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85C20BBA1FDC68F300959CBC /* ViewController.xib */; };
 		85C20BBD1FDC69DF00959CBC /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C20BBC1FDC69DF00959CBC /* Todo.swift */; };
 		85C20BBF1FDC6B5700959CBC /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C20BBE1FDC6B5700959CBC /* TableViewController.swift */; };
+		85C20BC21FDC736300959CBC /* CellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C20BC01FDC736300959CBC /* CellTableViewCell.swift */; };
+		85C20BC31FDC736300959CBC /* CellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85C20BC11FDC736300959CBC /* CellTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		85C20BBA1FDC68F300959CBC /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		85C20BBC1FDC69DF00959CBC /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 		85C20BBE1FDC6B5700959CBC /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		85C20BC01FDC736300959CBC /* CellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellTableViewCell.swift; sourceTree = "<group>"; };
+		85C20BC11FDC736300959CBC /* CellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,7 @@
 				85C20BB51FDC67EB00959CBC /* BaseViewController.swift */,
 				85C20BB91FDC689800959CBC /* Models */,
 				85C20BB81FDC687600959CBC /* View */,
+				85C20BC41FDC736D00959CBC /* Cell */,
 				85C20BB71FDC686E00959CBC /* Controllers */,
 				85C20BAA1FDC67CA00959CBC /* Assets.xcassets */,
 				85C20BAC1FDC67CA00959CBC /* LaunchScreen.storyboard */,
@@ -98,6 +103,15 @@
 				85C20BBC1FDC69DF00959CBC /* Todo.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		85C20BC41FDC736D00959CBC /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				85C20BC01FDC736300959CBC /* CellTableViewCell.swift */,
+				85C20BC11FDC736300959CBC /* CellTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +177,7 @@
 				85C20BAB1FDC67CA00959CBC /* Assets.xcassets in Resources */,
 				85C20BBB1FDC68F300959CBC /* ViewController.xib in Resources */,
 				85C20BA91FDC67CA00959CBC /* Main.storyboard in Resources */,
+				85C20BC31FDC736300959CBC /* CellTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +191,7 @@
 				85C20BA61FDC67CA00959CBC /* ViewController.swift in Sources */,
 				85C20BA41FDC67CA00959CBC /* AppDelegate.swift in Sources */,
 				85C20BB61FDC67EB00959CBC /* BaseViewController.swift in Sources */,
+				85C20BC21FDC736300959CBC /* CellTableViewCell.swift in Sources */,
 				85C20BBF1FDC6B5700959CBC /* TableViewController.swift in Sources */,
 				85C20BBD1FDC69DF00959CBC /* Todo.swift in Sources */,
 			);

@@ -25,7 +25,7 @@ class ToDo {
     static func loadToDos() -> [ToDo]?  {
         let toDo1 = ToDo(title: "Do The Exercise", isComplete: false, dueDate: Date(), notes: "quick,quick,quick")
         
-        return nil
+        return [toDo1]
     }
     
     
