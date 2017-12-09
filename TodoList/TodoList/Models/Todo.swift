@@ -21,7 +21,14 @@ class ToDo {
         self.dueDate = dueDate
         self.notes = notes
     }
-    
+ 
+    static func loadToDos() -> [ToDo]?  {
+        let toDo1 = ToDo(title: "Do The Exercise", isComplete: false, dueDate: Date(), notes: "quick,quick,quick")
+        
+        return nil
+    }
     
     
 }
+
+
