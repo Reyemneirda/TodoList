@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddToDoViewController" customModule="TodoList" customModuleProvider="target">
             <connections>
+                <outlet property="mainView" destination="i5M-Pr-FkT" id="HxC-6r-GdW"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -46,17 +47,90 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="33.5" y="54.5"/>
         </view>
-        <viewController id="oCP-hS-FYQ">
-            <view key="view" contentMode="scaleToFill" id="tXa-Z1-YQP">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
-                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                <color key="tintColor" red="0.0" green="0.20921585600000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                <viewLayoutGuide key="safeArea" id="Dky-OF-GsF"/>
-            </view>
+        <view contentMode="scaleToFill" id="tXa-Z1-YQP" userLabel="Container View">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="1099"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROc-3T-0dS">
+                    <rect key="frame" x="16" y="36" width="343" height="31.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Due Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fUa-32-6xq">
+                    <rect key="frame" x="16" y="135.5" width="343" height="31.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vtp-vm-Ou6">
+                    <rect key="frame" x="16" y="75.5" width="343" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="ei8-rD-icn">
+                    <rect key="frame" x="0.0" y="212" width="375" height="162"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="162" id="CNY-oi-Dob"/>
+                    </constraints>
+                    <date key="date" timeIntervalSinceReferenceDate="534674593.48425502">
+                        <!--2017-12-11 08:43:13 +0000-->
+                    </date>
+                </datePicker>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UPd-Of-9hQ">
+                    <rect key="frame" x="166" y="183.5" width="42" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="sSr-J7-OR5">
+                    <rect key="frame" x="16" y="434" width="343" height="31"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Is Completed ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Msn-a9-EUe">
+                            <rect key="frame" x="0.0" y="0.0" width="272" height="31"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2KY-c6-DM1">
+                            <rect key="frame" x="294" y="0.0" width="51" height="31"/>
+                        </switch>
+                    </subviews>
+                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OUw-Le-cl6">
+                    <rect key="frame" x="16" y="525" width="343" height="31.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="tintColor" red="0.97429201229999995" green="0.97273087830000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="ei8-rD-icn" firstAttribute="top" secondItem="UPd-Of-9hQ" secondAttribute="bottom" constant="8" symbolic="YES" id="0DS-mX-fgR"/>
+                <constraint firstItem="fUa-32-6xq" firstAttribute="top" secondItem="vtp-vm-Ou6" secondAttribute="bottom" constant="30" id="1o7-TZ-lrq"/>
+                <constraint firstItem="ei8-rD-icn" firstAttribute="top" secondItem="tXa-Z1-YQP" secondAttribute="top" constant="212" id="7Zc-MX-Ds0"/>
+                <constraint firstItem="vtp-vm-Ou6" firstAttribute="leading" secondItem="Dky-OF-GsF" secondAttribute="leading" constant="16" id="8yg-fO-VIL"/>
+                <constraint firstItem="Dky-OF-GsF" firstAttribute="trailing" secondItem="ROc-3T-0dS" secondAttribute="trailing" constant="16" id="9HV-YN-Np7"/>
+                <constraint firstItem="ei8-rD-icn" firstAttribute="centerX" secondItem="UPd-Of-9hQ" secondAttribute="centerX" id="DLz-y5-6Jh"/>
+                <constraint firstItem="OUw-Le-cl6" firstAttribute="top" secondItem="sSr-J7-OR5" secondAttribute="bottom" constant="60" id="EtR-yf-hGz"/>
+                <constraint firstItem="ei8-rD-icn" firstAttribute="leading" secondItem="tXa-Z1-YQP" secondAttribute="leading" id="FS3-cf-avM"/>
+                <constraint firstItem="Dky-OF-GsF" firstAttribute="trailing" secondItem="fUa-32-6xq" secondAttribute="trailing" constant="16" id="HgA-Yc-1pp"/>
+                <constraint firstItem="vtp-vm-Ou6" firstAttribute="top" secondItem="ROc-3T-0dS" secondAttribute="bottom" constant="8" id="LJD-4j-va3"/>
+                <constraint firstItem="fUa-32-6xq" firstAttribute="leading" secondItem="Dky-OF-GsF" secondAttribute="leading" constant="16" id="NDp-SW-ZA3"/>
+                <constraint firstItem="Dky-OF-GsF" firstAttribute="trailing" secondItem="sSr-J7-OR5" secondAttribute="trailing" constant="16" id="Npf-d3-VzF"/>
+                <constraint firstItem="ROc-3T-0dS" firstAttribute="leading" secondItem="Dky-OF-GsF" secondAttribute="leading" constant="16" id="Rs6-vp-CMj"/>
+                <constraint firstItem="OUw-Le-cl6" firstAttribute="leading" secondItem="Dky-OF-GsF" secondAttribute="leading" constant="16" id="b9o-xk-mzA"/>
+                <constraint firstItem="sSr-J7-OR5" firstAttribute="leading" secondItem="Dky-OF-GsF" secondAttribute="leading" constant="16" id="be3-Lg-5Sc"/>
+                <constraint firstItem="ROc-3T-0dS" firstAttribute="top" secondItem="Dky-OF-GsF" secondAttribute="top" constant="16" id="ech-nR-zt0"/>
+                <constraint firstItem="Dky-OF-GsF" firstAttribute="trailing" secondItem="OUw-Le-cl6" secondAttribute="trailing" constant="16" id="o8d-l5-6za"/>
+                <constraint firstItem="ei8-rD-icn" firstAttribute="centerX" secondItem="fUa-32-6xq" secondAttribute="centerX" id="qfe-Pz-I0n"/>
+                <constraint firstItem="sSr-J7-OR5" firstAttribute="top" secondItem="ei8-rD-icn" secondAttribute="bottom" constant="60" id="rru-cf-zwE"/>
+                <constraint firstItem="Dky-OF-GsF" firstAttribute="trailing" secondItem="vtp-vm-Ou6" secondAttribute="trailing" constant="16" id="z2f-YB-oR9"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <size key="freeformSize" width="375" height="1000"/>
-            <point key="canvasLocation" x="-413.5" y="158.5"/>
-        </viewController>
+            <viewLayoutGuide key="safeArea" id="Dky-OF-GsF"/>
+            <point key="canvasLocation" x="-384.5" y="776.5"/>
+        </view>
     </objects>
 </document>

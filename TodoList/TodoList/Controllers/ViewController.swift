@@ -63,40 +63,23 @@ class ViewController: BaseViewController, UITableViewDelegate, UITableViewDataSo
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        
-        
         let cell : CellTableViewCell = (tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? CellTableViewCell)!
-        // reuses or initializes a new cell
-        
-        
-        //        cell.textLabel?.text = "Row \(indexPath.row)"
-        
+
         let todo : ToDo = self.toDo![indexPath.row]
-        // gets the corresponding emoji for the indexpath row
+
         
         cell.updateWithToDo(toDo: todo)
-        // has the cell update its label based on the emoji
-        
-        //        cell.textLabel?.text = String(emoji.symbol)
-        //        cell.detailTextLabel?.text = emoji.emojidescription
+ 
+      
         
         return cell
-//
-//
-//        guard let cell: CellTableViewCell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? CellTableViewCell else
-//        {
-//
-//            fatalError("Could not dequeue a cell")
-//        }
-//
-//        let todo = toDo![indexPath.row]
-//        cell.textLabel?.text = todo.title
-//        return cell
-//
-//    }
-    
 
- 
 }
+    
+    @IBAction func addToDo(_ sender: Any)
+    {
+        performSegue(withIdentifier: "addToDO", sender: nil)
+    }
+    
 
 }
