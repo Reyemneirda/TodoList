@@ -8,6 +8,13 @@
 
 import UIKit
 
+
+protocol ToDoTableViewCellDelegate : NSObjectProtocol
+{
+    func updateWithToDo(todo: ToDo?)
+}
+
+
 class CellTableViewCell: UITableViewCell {
     
     @IBOutlet private weak var checkButton: UIButton!
@@ -16,8 +23,12 @@ class CellTableViewCell: UITableViewCell {
     
       var todo:ToDo?
     
+    weak var delegate:ToDoTableViewCellDelegate?
+    
+
     func updateWithToDo(toDo: ToDo)
     {
+        self.todo = toDo
         self.checkButton.isSelected = (self.todo?.isComplete)!
         self.lbTitle.text = toDo.title
         self.lbNotes.text = toDo.notes
@@ -29,6 +40,8 @@ class CellTableViewCell: UITableViewCell {
         self.todo?.isComplete = !(self.todo?.isComplete)!
         
         self.checkButton.isSelected = (self.todo?.isComplete)!
+        
+        self.delegate?.updateWithToDo(todo: self.todo)
     }
     
 }

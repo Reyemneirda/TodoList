@@ -78,7 +78,7 @@ class ViewController: BaseViewController, UITableViewDelegate, UITableViewDataSo
     
     @IBAction func addToDo(_ sender: Any)
     {
-        performSegue(withIdentifier: "addToDO", sender: nil)
+        performSegue(withIdentifier: "addToDo", sender: nil)
     }
     
 

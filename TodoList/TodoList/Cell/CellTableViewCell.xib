@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,38 +20,41 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sd0-kx-BtD">
-                        <rect key="frame" x="0.0" y="-1" width="44" height="44"/>
+                        <rect key="frame" x="0.0" y="1" width="41" height="41"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="41" id="YWn-bW-jQ0"/>
+                            <constraint firstAttribute="width" constant="41" id="cEd-qi-bwc"/>
+                        </constraints>
                         <state key="normal" title="Button" image="Unchecked"/>
+                        <state key="selected" image="Checked"/>
                         <connections>
                             <action selector="toggleCompleted:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ubp-58-Xbk"/>
                         </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DrX-TM-ddo">
-                        <rect key="frame" x="52" y="-1" width="50" height="22"/>
+                        <rect key="frame" x="49" y="1" width="271" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kmT-Jy-wdF">
-                        <rect key="frame" x="52" y="21" width="50" height="22"/>
+                        <rect key="frame" x="49" y="23" width="271" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="sd0-kx-BtD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="EH0-LH-XFy"/>
-                    <constraint firstAttribute="trailing" secondItem="sd0-kx-BtD" secondAttribute="trailing" constant="276" id="TRg-zi-QSJ"/>
-                    <constraint firstItem="kmT-Jy-wdF" firstAttribute="top" secondItem="DrX-TM-ddo" secondAttribute="bottom" id="VWu-IA-Hhf"/>
-                    <constraint firstAttribute="bottom" secondItem="sd0-kx-BtD" secondAttribute="bottom" id="YQ9-qs-0vK"/>
-                    <constraint firstItem="DrX-TM-ddo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-12" id="ZLP-Es-GEK"/>
-                    <constraint firstItem="DrX-TM-ddo" firstAttribute="leading" secondItem="sd0-kx-BtD" secondAttribute="trailing" constant="8" id="cPh-Q0-9eJ"/>
-                    <constraint firstItem="sd0-kx-BtD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="-1" id="emY-kc-NrX"/>
-                    <constraint firstItem="kmT-Jy-wdF" firstAttribute="leading" secondItem="sd0-kx-BtD" secondAttribute="trailing" constant="8" id="hwX-UG-6qw"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="DrX-TM-ddo" secondAttribute="bottom" constant="12" id="i5S-mu-K1X"/>
-                    <constraint firstAttribute="bottom" secondItem="kmT-Jy-wdF" secondAttribute="bottom" id="ijf-Pv-9He"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="DrX-TM-ddo" secondAttribute="trailing" constant="202" id="mEN-Jg-Q0s"/>
-                    <constraint firstAttribute="trailing" secondItem="kmT-Jy-wdF" secondAttribute="trailing" constant="218" id="vXW-dF-9Gl"/>
+                    <constraint firstItem="kmT-Jy-wdF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="23" id="49L-nh-w6w"/>
+                    <constraint firstItem="sd0-kx-BtD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="4Ns-9b-hOb"/>
+                    <constraint firstAttribute="bottom" secondItem="sd0-kx-BtD" secondAttribute="bottom" constant="1" id="9Iy-Xi-NIQ"/>
+                    <constraint firstAttribute="trailing" secondItem="DrX-TM-ddo" secondAttribute="trailing" id="9aJ-el-5Rv"/>
+                    <constraint firstItem="kmT-Jy-wdF" firstAttribute="leading" secondItem="sd0-kx-BtD" secondAttribute="trailing" constant="8" id="BkI-Pe-qco"/>
+                    <constraint firstAttribute="bottom" secondItem="kmT-Jy-wdF" secondAttribute="bottom" constant="-0.5" id="CCZ-3M-kDF"/>
+                    <constraint firstAttribute="trailing" secondItem="kmT-Jy-wdF" secondAttribute="trailing" id="Ekz-Pv-tMf"/>
+                    <constraint firstItem="DrX-TM-ddo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="1" id="Gfe-Nn-W5X"/>
+                    <constraint firstItem="DrX-TM-ddo" firstAttribute="leading" secondItem="sd0-kx-BtD" secondAttribute="trailing" constant="8" id="Kyg-N5-56M"/>
+                    <constraint firstItem="sd0-kx-BtD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="1" id="khj-gt-R2L"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -61,9 +63,11 @@
                 <outlet property="lbNotes" destination="kmT-Jy-wdF" id="v82-AF-yXm"/>
                 <outlet property="lbTitle" destination="DrX-TM-ddo" id="gNR-QE-1ev"/>
             </connections>
+            <point key="canvasLocation" x="56" y="124"/>
         </tableViewCell>
     </objects>
     <resources>
+        <image name="Checked" width="44" height="44"/>
         <image name="Unchecked" width="44" height="44"/>
     </resources>
 </document>

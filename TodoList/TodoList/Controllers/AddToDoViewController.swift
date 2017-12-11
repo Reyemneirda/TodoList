@@ -22,6 +22,7 @@ class AddToDoViewController: BaseViewController {
         self.containerView.frame = CGRect(x: 0, y: 0, width: self.scrollView.frame.size.width, height: self.containerView.frame.size.height) // only to scroll up and down
         
         self.scrollView.addSubview(self.containerView)
+        
     }
     
     @IBAction func cancel(_ sender: Any)
