@@ -22,9 +22,9 @@ class ToDo {
         self.notes = notes
     }
  
-    static func loadToDos() -> [ToDo]  {
+    static func loadToDos() -> [ToDo]
+    {
         return [ToDo(title: "Do The Exercise", isComplete: false, dueDate: Date(), notes: "quick,quick,quick")]
-        
     }
     
     

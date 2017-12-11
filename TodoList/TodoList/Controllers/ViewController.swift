@@ -14,13 +14,7 @@ class ViewController: BaseViewController, UITableViewDelegate, UITableViewDataSo
     @IBOutlet weak var tableView: UITableView!
 
     
-    var toDo : [ToDo]? {
-        
-        if let loadedTodo : [ToDo] = ToDo.loadToDos()
-        {
-            return loadedTodo
-        }
-    }
+    var toDo:[ToDo]?
 
     
     
@@ -30,20 +24,36 @@ class ViewController: BaseViewController, UITableViewDelegate, UITableViewDataSo
         
         
          self.tableView.register(UINib(nibName: "CellTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "Cell")
+        
+        if let savedToDos: [ToDo] = ToDo.loadToDos()
+        {
+            self.toDo = savedToDos
+        }
+        else
+        {
+            self.toDo = ToDo.loadToDos()
+        }
+        
+        self.tableView.reloadData()
+        
+      
+        
+        
     }
     
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if let indexPath: IndexPath =
+            self.tableView.indexPathForSelectedRow
+        {
+            self.tableView.deselectRow(at: indexPath, animated: false)
+        }
     }
+
+    
+    
     
     // MARK: - Table view data source
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows

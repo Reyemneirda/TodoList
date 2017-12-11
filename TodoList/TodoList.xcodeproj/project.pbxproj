@@ -17,6 +17,8 @@
 		85C20BBD1FDC69DF00959CBC /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C20BBC1FDC69DF00959CBC /* Todo.swift */; };
 		85C20BC21FDC736300959CBC /* CellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C20BC01FDC736300959CBC /* CellTableViewCell.swift */; };
 		85C20BC31FDC736300959CBC /* CellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85C20BC11FDC736300959CBC /* CellTableViewCell.xib */; };
+		85D3F6B61FDE777000159A2D /* AddToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D3F6B41FDE777000159A2D /* AddToDoViewController.swift */; };
+		85D3F6B71FDE777000159A2D /* AddToDoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85D3F6B51FDE777000159A2D /* AddToDoViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		85C20BBC1FDC69DF00959CBC /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 		85C20BC01FDC736300959CBC /* CellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellTableViewCell.swift; sourceTree = "<group>"; };
 		85C20BC11FDC736300959CBC /* CellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellTableViewCell.xib; sourceTree = "<group>"; };
+		85D3F6B41FDE777000159A2D /* AddToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToDoViewController.swift; sourceTree = "<group>"; };
+		85D3F6B51FDE777000159A2D /* AddToDoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddToDoViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,8 @@
 			children = (
 				85C20BA51FDC67CA00959CBC /* ViewController.swift */,
 				85C20BBA1FDC68F300959CBC /* ViewController.xib */,
+				85D3F6B41FDE777000159A2D /* AddToDoViewController.swift */,
+				85D3F6B51FDE777000159A2D /* AddToDoViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -174,6 +180,7 @@
 				85C20BAB1FDC67CA00959CBC /* Assets.xcassets in Resources */,
 				85C20BBB1FDC68F300959CBC /* ViewController.xib in Resources */,
 				85C20BA91FDC67CA00959CBC /* Main.storyboard in Resources */,
+				85D3F6B71FDE777000159A2D /* AddToDoViewController.xib in Resources */,
 				85C20BC31FDC736300959CBC /* CellTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -189,6 +196,7 @@
 				85C20BA41FDC67CA00959CBC /* AppDelegate.swift in Sources */,
 				85C20BB61FDC67EB00959CBC /* BaseViewController.swift in Sources */,
 				85C20BC21FDC736300959CBC /* CellTableViewCell.swift in Sources */,
+				85D3F6B61FDE777000159A2D /* AddToDoViewController.swift in Sources */,
 				85C20BBD1FDC69DF00959CBC /* Todo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
