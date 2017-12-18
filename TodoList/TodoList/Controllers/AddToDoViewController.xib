@@ -12,8 +12,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddToDoViewController" customModule="TodoList" customModuleProvider="target">
             <connections>
+                <outlet property="completedSwitch" destination="2KY-c6-DM1" id="2eI-cL-dKU"/>
                 <outlet property="containerView" destination="tXa-Z1-YQP" id="y0s-8U-vUX"/>
+                <outlet property="dueDatePicker" destination="ei8-rD-icn" id="iHj-WY-fH1"/>
                 <outlet property="scrollView" destination="B8X-qg-TDV" id="qa4-TH-b8V"/>
+                <outlet property="txtFieldTitle" destination="vtp-vm-Ou6" id="ALV-Zm-fVZ"/>
+                <outlet property="txtViewNotes" destination="DZp-EV-bih" id="U1V-iR-rj7"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -34,7 +38,11 @@
                                     <action selector="cancel:" destination="-1" id="AFK-Gi-SPB"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem key="rightBarButtonItem" systemItem="save" id="NcM-A7-Ap1"/>
+                            <barButtonItem key="rightBarButtonItem" systemItem="save" id="NcM-A7-Ap1">
+                                <connections>
+                                    <action selector="save:" destination="-1" id="SNw-ru-gmV"/>
+                                </connections>
+                            </barButtonItem>
                         </navigationItem>
                     </items>
                 </navigationBar>
@@ -87,28 +95,31 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <stackView opaque="NO" contentMode="scaleToFill" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="sSr-J7-OR5">
-                    <rect key="frame" x="16" y="412.5" width="343" height="31.5"/>
+                    <rect key="frame" x="16" y="412.5" width="343" height="31"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Is Completed ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Msn-a9-EUe">
-                            <rect key="frame" x="0.0" y="0.0" width="272" height="31.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="272" height="31"/>
                             <fontDescription key="fontDescription" type="system" pointSize="26"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2KY-c6-DM1">
-                            <rect key="frame" x="294" y="0.0" width="51" height="31.5"/>
+                            <rect key="frame" x="294" y="0.0" width="51" height="31"/>
                         </switch>
                     </subviews>
                 </stackView>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DZp-EV-bih">
-                    <rect key="frame" x="16" y="500.5" width="343" height="348.5"/>
+                    <rect key="frame" x="16" y="500" width="343" height="349"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="349" id="Bmj-ri-o2x"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" address="YES"/>
                 </textView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OUw-Le-cl6">
-                    <rect key="frame" x="16" y="464" width="343" height="31.5"/>
+                    <rect key="frame" x="16" y="463.5" width="343" height="31.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="26"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
