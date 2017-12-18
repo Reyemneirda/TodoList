@@ -33,11 +33,6 @@
                     <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                     <items>
                         <navigationItem title="Title" id="8Co-Xh-Kda">
-                            <barButtonItem key="leftBarButtonItem" systemItem="edit" id="Y0M-DX-ml8">
-                                <connections>
-                                    <action selector="editStuff:" destination="-1" id="W1e-IN-lGu"/>
-                                </connections>
-                            </barButtonItem>
                             <barButtonItem key="rightBarButtonItem" systemItem="add" id="5Q0-SL-h0V">
                                 <connections>
                                     <action selector="addToDo:" destination="-1" id="skQ-R3-bWa"/>

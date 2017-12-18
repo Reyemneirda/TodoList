@@ -45,9 +45,40 @@ class ViewController: BaseViewController, UITableViewDelegate, UITableViewDataSo
         
         
     }
+//
+//    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
+//        return .delete
+//    }
+//
+//    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
+//    {
+//        if editingStyle == .delete
+//        {
+//            toDo?.remove(at: indexPath.row)
+//            tableView.deleteRows(at: [indexPath], with: . automatic)
+//
+//            ToDo.saveToFile(todos: self.toDo!)
+//        }
+//    }
     
-    @IBAction func editStuff(_ sender: Any) {
+    
+    
+        
+func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle
+    {
+            return .delete
     }
+        
+func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
+        {
+            if editingStyle == .delete
+            {
+                toDo?.remove(at: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: . automatic)
+                
+                ToDo.saveToFile(todos: self.toDo!)
+            }
+        }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -63,13 +94,12 @@ class ViewController: BaseViewController, UITableViewDelegate, UITableViewDataSo
     
     // MARK: - Table view data source
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return self.toDo!.count
     }
-    
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+   
+     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell : CellTableViewCell = (tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? CellTableViewCell)!
 
