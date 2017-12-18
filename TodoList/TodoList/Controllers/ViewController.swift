@@ -25,18 +25,17 @@ class ViewController: BaseViewController, UITableViewDelegate, UITableViewDataSo
         
          self.tableView.register(UINib(nibName: "CellTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "Cell")
         
-        if let savedToDos: [ToDo] = ToDo.loadToDos()
+        if let loadedTodoList : [ToDo] = ToDo.loadToDos(), loadedTodoList.count > 0
         {
-            self.toDo = savedToDos
+            self.toDo = loadedTodoList
         }
         else
         {
-            self.toDo = ToDo.loadToDos()
+            self.toDo = ToDo.loadSampleToDos()
+            ToDo.saveToFile(todos: self.toDo!)
         }
         
         self.tableView.reloadData()
-        
-      
         
         
     }
@@ -57,7 +56,7 @@ class ViewController: BaseViewController, UITableViewDelegate, UITableViewDataSo
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return toDo!.count
+        return self.toDo!.count
     }
     
     
@@ -67,7 +66,8 @@ class ViewController: BaseViewController, UITableViewDelegate, UITableViewDataSo
 
         let todo : ToDo = self.toDo![indexPath.row]
 
-        
+        cell.delegate = self as! ToDoTableViewCellDelegate
+
         cell.updateWithToDo(toDo: todo)
  
       
@@ -81,5 +81,20 @@ class ViewController: BaseViewController, UITableViewDelegate, UITableViewDataSo
         performSegue(withIdentifier: "addToDo", sender: nil)
     }
     
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if let vc : AddToDoViewController = segue.destination as? AddToDoViewController
+        {
+            vc.delegate = self as! AddToDoDelegate
+        }
+    }
+    
+    func addToDo(todo: ToDo)
+    {
+        self.toDo?.append(todo)
+        
+        ToDo.saveToFile(todos: self.toDo! )
+        
+        self.tableView.reloadData()
+    }
 }

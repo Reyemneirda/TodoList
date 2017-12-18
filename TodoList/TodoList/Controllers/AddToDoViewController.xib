@@ -14,6 +14,7 @@
             <connections>
                 <outlet property="completedSwitch" destination="2KY-c6-DM1" id="2eI-cL-dKU"/>
                 <outlet property="containerView" destination="tXa-Z1-YQP" id="y0s-8U-vUX"/>
+                <outlet property="dateLabel" destination="UPd-Of-9hQ" id="8gx-uB-MF7"/>
                 <outlet property="dueDatePicker" destination="ei8-rD-icn" id="iHj-WY-fH1"/>
                 <outlet property="scrollView" destination="B8X-qg-TDV" id="qa4-TH-b8V"/>
                 <outlet property="txtFieldTitle" destination="vtp-vm-Ou6" id="ALV-Zm-fVZ"/>
@@ -87,6 +88,9 @@
                     <date key="date" timeIntervalSinceReferenceDate="534674593.48425502">
                         <!--2017-12-11 08:43:13 +0000-->
                     </date>
+                    <connections>
+                        <action selector="dateLabelUpdated" destination="-1" eventType="editingChanged" id="0kh-Qn-AN0"/>
+                    </connections>
                 </datePicker>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UPd-Of-9hQ">
                     <rect key="frame" x="0.0" y="151" width="375" height="20.5"/>

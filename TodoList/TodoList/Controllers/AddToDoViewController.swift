@@ -16,6 +16,7 @@ protocol AddToDoDelegate : NSObjectProtocol
 
 class AddToDoViewController: BaseViewController {
 
+    @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet var containerView: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var txtFieldTitle: UITextField!
@@ -36,10 +37,24 @@ class AddToDoViewController: BaseViewController {
         
         self.scrollView.addSubview(self.containerView)
         
+        updateDateView()
+        
     }
     
-    func Upd
+    func updateDateView ()
+    {
+        
+        let dateFormatter = DateFormatter()
+        
+        dateFormatter.dateStyle = .medium
+        
+        dateLabel.text = dateFormatter.string(from: dueDatePicker.date)
+    }
     
+    @IBAction func dateLabelUpdated()
+    {
+        updateDateView()
+    }
     
     @IBAction func save(_ sender: Any)
     {
