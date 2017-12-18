@@ -8,7 +8,13 @@
 
 import UIKit
 
-class ViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource, ToDoTableViewCellDelegate, AddToDoDelegate
+{
+    func updateWithToDo(todo: ToDo?) {
+        
+        print("Todo updated")
+    }
+    
 
     
     @IBOutlet weak var tableView: UITableView!
@@ -40,6 +46,9 @@ class ViewController: BaseViewController, UITableViewDelegate, UITableViewDataSo
         
     }
     
+    @IBAction func editStuff(_ sender: Any) {
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         if let indexPath: IndexPath =
@@ -66,8 +75,8 @@ class ViewController: BaseViewController, UITableViewDelegate, UITableViewDataSo
 
         let todo : ToDo = self.toDo![indexPath.row]
 
-        cell.delegate = self as! ToDoTableViewCellDelegate
-
+        cell.delegate = self
+        
         cell.updateWithToDo(toDo: todo)
  
       
